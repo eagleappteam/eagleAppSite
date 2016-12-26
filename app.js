@@ -1,13 +1,7 @@
 var app = require('./config/express')();
+require('./config/conect')
 
-var mongoose = require('mongoose')
- 
-    
 app.listen(3000, function(){
     console.log('Server Online');
 
-    
-
-
-})  
-
+})

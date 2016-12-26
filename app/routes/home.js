@@ -1,24 +1,18 @@
+var mongoose = require('mongoose');
+
 module.exports = function(app){
-     db = require('../models/eagleAppDB');
+    var db = mongoose.model('Planosite')
 
-     app.post('/eagleAppDB', function(req, res){
-         var collection = new db({nome : 'elkerton'})
-         collection.save(function(err){
-             if(!err){
-                 res.json(err);
-             }
-         })
-     })    
+    app.get('/', function(req,res){
 
-     app.get('/eagleAppDB', function(req,res){
-        
+    db.find().exec((err, data) => {
+    if(!err){
+        res.render('home',{lista:data});
 
-        db.find({}).exec((err, data) => {
-        if(!err)
-            res.json(data);
-        else
-            res.json(err);
+    }
+    else
+        res.json(err);
     });
-        
-     })  
+
+ })
 }

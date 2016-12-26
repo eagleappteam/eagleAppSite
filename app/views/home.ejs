@@ -11,5 +11,40 @@
             <a href="/blog">Blogs</a>
             <a href="/sistema">Sistemas</a>
             <a href="/loja">Lojas</a>
+
+            <table>
+                <tr>
+                    <th>
+                        nome
+                    </th>
+                    <th>
+                        preco
+                    </th>
+                    <th>
+                        descricao
+                    </th>
+                    <th>
+                        qtdPaginas
+                    </th>
+                </tr>
+                <%for (var i=0; i<lista.length; i++){%>
+                    <tr>
+                        <td>
+                            <%=lista[i].nome%>
+                        </td>
+                        <td>
+                            <%=lista[i].preco%>
+                        </td>
+                        <td>
+                            <%=lista[i].descricao%>
+                        </td>
+                        <td>
+                            <%=lista[i].qtdPaginas%>
+                        </td>
+                        <button type="button" name="button">Detalhes</button>
+                    </tr>/
+                    <%}%>
+
+            </table>
     </body>
 </html>

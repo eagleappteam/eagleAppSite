@@ -1,16 +1,18 @@
 var express = require('express');
 
-var load = require('express-load');
+var consign = require('consign');
 
 module.exports = function(){
     var app = express();
 
     app.set('view engine', 'ejs');
     app.set('views', './app/views');
-    
 
-    load('routes', {cwd : 'app'})
-        .then('infra')
+
+    consign({cwd : 'app'})
+        .include('models')
+        //.then('infra')
+        .then('routes')
         .into(app);
 
     return app;

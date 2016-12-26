@@ -1,16 +1,30 @@
-var mongoose = require('mongoose'),
-    Schema = mongoose.Schema;
+var mongoose = require('mongoose')
 
-module.exports = function(){
-    var planoSites = new Schema({
-        nome : String,
-        // preco : Integer,
-        // qtdPaginas : Integer,
-        descricao : String,
-        createdIn : { type: Date, default : Date.now()},
-        done : { type : Boolean, default : false}
+var schema = mongoose.Schema({
+        nome: {
+            type: String,
+            required:  true
+        },
+        preco: {
+             type: Number,
+             required: true
+         },
+        qtdPaginas: {
+            type: Number,
+            required: true
+        },
+        descricao: {
+            type: String,
+            required: true
+        },
+        createdIn: {
+            type: Date,
+            default: Date.now()
+        },
+        done: {
+            type: Boolean,
+            default : false
+        }
     });
 
-    return mongoose.model('eagleAppDB', planoSites);
-
-}();
+    mongoose.model('Planosite', schema);
