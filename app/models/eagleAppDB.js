@@ -17,6 +17,10 @@ var schema = mongoose.Schema({
             type: String,
             required: true
         },
+        descricaoCompleta:{
+            type : String,
+            required : true
+        },
         createdIn: {
             type: Date,
             default: Date.now()
