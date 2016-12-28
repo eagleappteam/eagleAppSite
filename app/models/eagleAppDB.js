@@ -32,3 +32,6 @@ var schema = mongoose.Schema({
     });
 
     mongoose.model('Planosite', schema);
+    mongoose.model('Planosistema', schema);
+    mongoose.model('Planoblog', schema);
+    mongoose.model('Planoloja', schema);

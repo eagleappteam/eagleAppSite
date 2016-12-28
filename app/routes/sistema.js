@@ -1,10 +1,10 @@
 var mongoose = require('mongoose');
 
 module.exports = function(app){
-    var db = mongoose.model('Planosite')
+    var db = mongoose.model('Planosistema')
 
      app.get('/sistema/:id/show', function(req,res){
-         
+
          var id =  req.params.id;
          var objectid = mongoose.Types.ObjectId(id);
          db.find({_id : objectid}).exec((err, data) => {
@@ -14,6 +14,6 @@ module.exports = function(app){
                  res.redirect('/')
              }
          })
-         
-     })  
+
+     })
 }

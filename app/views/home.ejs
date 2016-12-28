@@ -24,24 +24,74 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="content-services">
                     <div class="row">
-                        <%for (var i=0; i<lista.length; i++){%>
+                        <h3>Planos de Sistema</h3>
+                        <%for (var i=0; i<sistema.length; i++){%>
                         <div class="card-service col-md-2 text-center">
                             <ul>
-                                <li><%=lista[i].nome%></li>
-                                <li><%=lista[i].preco%></li>
-                                <li><%=lista[i].descricao%></li>
-                                <li>Número de Páginas : <%=lista[i].qtdPaginas%></li>
-                                <li><a href="/sistema/<%=lista[i]._id%>/show"><button type="button" name="button">Detalhes</button></a></li>
+                                <li><%=sistema[i].nome%></li>
+                                <li><%=sistema[i].preco%></li>
+                                <li><%=sistema[i].descricao%></li>
+                                <li>Número de Páginas : <%=sistema[i].qtdPaginas%></li>
+                                <li><a href="/sistema/<%=sistema[i]._id%>/show"><button type="button" name="button">Detalhes</button></a></li>
                             </ul>
                         </div>
                         <%}%>
                     </div>
+
+                    <div class="row">
+                        <h3>Planos de Sites</h3>
+                        <%for (var i=0; i<site.length; i++){%>
+                        <div class="card-service col-md-2 text-center">
+                            <ul>
+                                <li><%=site[i].nome%></li>
+                                <li><%=site[i].preco%></li>
+                                <li><%=site[i].descricao%></li>
+                                <li>Número de Páginas : <%=site[i].qtdPaginas%></li>
+                                <li><a href="/sites/<%=site[i]._id%>/show"><button type="button" name="button">Detalhes</button></a></li>
+                            </ul>
+                        </div>
+                        <%}%>
+                    </div>
+
+                    <div class="content-services">
+                        <div class="row">
+                            <h3>Planos de Blogs</h3>
+                            <%for (var i=0; i<blog.length; i++){%>
+                            <div class="card-service col-md-2 text-center">
+                                <ul>
+                                    <li><%=blog[i].nome%></li>
+                                    <li><%=blog[i].preco%></li>
+                                    <li><%=blog[i].descricao%></li>
+                                    <li>Número de Páginas : <%=blog[i].qtdPaginas%></li>
+                                    <li><a href="/blog/<%=blog[i]._id%>/show"><button type="button" name="button">Detalhes</button></a></li>
+                                </ul>
+                            </div>
+                            <%}%>
+                        </div>
+
+                        <div class="content-services">
+                            <div class="row">
+                                <h3>Planos de Lojas Virtuais</h3>
+                                <%for (var i=0; i<loja.length; i++){%>
+                                <div class="card-service col-md-2 text-center">
+                                    <ul>
+                                        <li><%=loja[i].nome%></li>
+                                        <li><%=loja[i].preco%></li>
+                                        <li><%=loja[i].descricao%></li>
+                                        <li>Número de Páginas : <%=loja[i].qtdPaginas%></li>
+                                        <li><a href="/loja/<%=loja[i]._id%>/show"><button type="button" name="button">Detalhes</button></a></li>
+                                    </ul>
+                                </div>
+                                <%}%>
+                            </div>
+
                 </div>
             </div>
-           
-                
+
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script src="http://code.jquery.com/jquery-3.1.1.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
